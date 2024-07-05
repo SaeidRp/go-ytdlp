@@ -1,4 +1,4 @@
-module github.com/lrstanley/go-ytdlp
+module github.com/saeidrp/go-ytdlp
 
 go 1.21
 

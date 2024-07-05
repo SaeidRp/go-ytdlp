@@ -15,7 +15,7 @@ import (
 	"time"
 	"unicode"
 
-	"github.com/lrstanley/go-ytdlp/template"
+	"github.com/saeidrp/go-ytdlp/template"
 )
 
 // Result contains the yt-dlp execution results, including stdout/stderr, exit code,

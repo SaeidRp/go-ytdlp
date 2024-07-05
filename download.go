@@ -3,7 +3,7 @@ package ytdlp
 import (
 	"fmt"
 
-	"github.com/lrstanley/go-ytdlp/template"
+	"github.com/saeidrp/go-ytdlp/template"
 )
 
 // progressLinePrefix is used to prefix the progress line, making it easier to identify during

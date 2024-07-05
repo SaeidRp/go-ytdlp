@@ -9,40 +9,40 @@
 <!-- do not edit anything in this "template" block, its auto-generated -->
 
 <p align="center">
-  <a href="https://github.com/lrstanley/go-ytdlp/tags">
-    <img title="Latest Semver Tag" src="https://img.shields.io/github/v/tag/lrstanley/go-ytdlp?style=flat-square">
+  <a href="https://github.com/saeidrp/go-ytdlp/tags">
+    <img title="Latest Semver Tag" src="https://img.shields.io/github/v/tag/saeidrp/go-ytdlp?style=flat-square">
   </a>
-  <a href="https://github.com/lrstanley/go-ytdlp/commits/master">
-    <img title="Last commit" src="https://img.shields.io/github/last-commit/lrstanley/go-ytdlp?style=flat-square">
-  </a>
-
-
-  <a href="https://github.com/lrstanley/go-ytdlp/actions?query=workflow%3Atest+event%3Apush">
-    <img title="GitHub Workflow Status (test @ master)" src="https://img.shields.io/github/actions/workflow/status/lrstanley/go-ytdlp/test.yml?branch=master&label=test&style=flat-square">
+  <a href="https://github.com/saeidrp/go-ytdlp/commits/master">
+    <img title="Last commit" src="https://img.shields.io/github/last-commit/saeidrp/go-ytdlp?style=flat-square">
   </a>
 
-  <a href="https://codecov.io/gh/lrstanley/go-ytdlp">
-    <img title="Code Coverage" src="https://img.shields.io/codecov/c/github/lrstanley/go-ytdlp/master?style=flat-square">
+
+  <a href="https://github.com/saeidrp/go-ytdlp/actions?query=workflow%3Atest+event%3Apush">
+    <img title="GitHub Workflow Status (test @ master)" src="https://img.shields.io/github/actions/workflow/status/saeidrp/go-ytdlp/test.yml?branch=master&label=test&style=flat-square">
   </a>
 
-  <a href="https://pkg.go.dev/github.com/lrstanley/go-ytdlp">
-    <img title="Go Documentation" src="https://pkg.go.dev/badge/github.com/lrstanley/go-ytdlp?style=flat-square">
+  <a href="https://codecov.io/gh/saeidrp/go-ytdlp">
+    <img title="Code Coverage" src="https://img.shields.io/codecov/c/github/saeidrp/go-ytdlp/master?style=flat-square">
   </a>
-  <a href="https://goreportcard.com/report/github.com/lrstanley/go-ytdlp">
-    <img title="Go Report Card" src="https://goreportcard.com/badge/github.com/lrstanley/go-ytdlp?style=flat-square">
+
+  <a href="https://pkg.go.dev/github.com/saeidrp/go-ytdlp">
+    <img title="Go Documentation" src="https://pkg.go.dev/badge/github.com/saeidrp/go-ytdlp?style=flat-square">
+  </a>
+  <a href="https://goreportcard.com/report/github.com/saeidrp/go-ytdlp">
+    <img title="Go Report Card" src="https://goreportcard.com/badge/github.com/saeidrp/go-ytdlp?style=flat-square">
   </a>
 </p>
 <p align="center">
-  <a href="https://github.com/lrstanley/go-ytdlp/issues?q=is:open+is:issue+label:bug">
-    <img title="Bug reports" src="https://img.shields.io/github/issues/lrstanley/go-ytdlp/bug?label=issues&style=flat-square">
+  <a href="https://github.com/saeidrp/go-ytdlp/issues?q=is:open+is:issue+label:bug">
+    <img title="Bug reports" src="https://img.shields.io/github/issues/saeidrp/go-ytdlp/bug?label=issues&style=flat-square">
   </a>
-  <a href="https://github.com/lrstanley/go-ytdlp/issues?q=is:open+is:issue+label:enhancement">
-    <img title="Feature requests" src="https://img.shields.io/github/issues/lrstanley/go-ytdlp/enhancement?label=feature%20requests&style=flat-square">
+  <a href="https://github.com/saeidrp/go-ytdlp/issues?q=is:open+is:issue+label:enhancement">
+    <img title="Feature requests" src="https://img.shields.io/github/issues/saeidrp/go-ytdlp/enhancement?label=feature%20requests&style=flat-square">
   </a>
-  <a href="https://github.com/lrstanley/go-ytdlp/pulls">
-    <img title="Open Pull Requests" src="https://img.shields.io/github/issues-pr/lrstanley/go-ytdlp?label=prs&style=flat-square">
+  <a href="https://github.com/saeidrp/go-ytdlp/pulls">
+    <img title="Open Pull Requests" src="https://img.shields.io/github/issues-pr/saeidrp/go-ytdlp?label=prs&style=flat-square">
   </a>
-  <a href="https://github.com/lrstanley/go-ytdlp/discussions/new?category=q-a">
+  <a href="https://github.com/saeidrp/go-ytdlp/discussions/new?category=q-a">
     <img title="Ask a Question" src="https://img.shields.io/badge/support-ask_a_question!-blue?style=flat-square">
   </a>
   <a href="https://liam.sh/chat"><img src="https://img.shields.io/badge/discord-bytecord-blue.svg?style=flat-square" title="Discord Chat"></a>
@@ -90,7 +90,7 @@ until 1.0.0 !!!**
 <!-- template:begin:goget -->
 <!-- do not edit anything in this "template" block, its auto-generated -->
 ```console
-go get -u github.com/lrstanley/go-ytdlp@latest
+go get -u github.com/saeidrp/go-ytdlp@latest
 ```
 <!-- template:end:goget -->
 
@@ -107,7 +107,7 @@ package main
 import (
 	"context"
 
-	"github.com/lrstanley/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp"
 )
 
 func main() {
@@ -136,7 +136,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/lrstanley/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp"
 )
 
 func main() {
@@ -171,7 +171,7 @@ func main() {
      the community.
 * :raising_hand_man: Take a look at the [support](.github/SUPPORT.md) document on
      guidelines for tips on how to ask the right questions.
-* :lady_beetle: For all features/bugs/issues/questions/etc, [head over here](https://github.com/lrstanley/go-ytdlp/issues/new/choose).
+* :lady_beetle: For all features/bugs/issues/questions/etc, [head over here](https://github.com/saeidrp/go-ytdlp/issues/new/choose).
 <!-- template:end:support -->
 
 <!-- template:begin:contributing -->
@@ -183,7 +183,7 @@ func main() {
     community.
 * :clipboard: Please review the [contributing](.github/CONTRIBUTING.md) doc for submitting
      issues/a guide on submitting pull requests and helping out.
-* :old_key: For anything security related, please review this repositories [security policy](https://github.com/lrstanley/go-ytdlp/security/policy).
+* :old_key: For anything security related, please review this repositories [security policy](https://github.com/saeidrp/go-ytdlp/security/policy).
 <!-- template:end:contributing -->
 
 <!-- template:begin:license -->

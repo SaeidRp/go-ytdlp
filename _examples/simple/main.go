@@ -10,7 +10,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/lrstanley/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp"
 )
 
 func main() {
