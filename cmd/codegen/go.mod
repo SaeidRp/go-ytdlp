@@ -1,4 +1,4 @@
-module github.com/lrstanley/go-ytdlp/cmd/codegen
+module github.com/saeidrp/go-ytdlp/cmd/codegen
 
 go 1.21.0
 

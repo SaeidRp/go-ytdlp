@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/lrstanley/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp"
 )
 
 func main() {
@@ -19,9 +19,9 @@ func main() {
 		Output("%(extractor)s - %(title)s.%(ext)s").
 		SetProgressFn(func(p ytdlp.DownloadProgress) {
 			if p.IsPlaylist() {
-				fmt.Printf("\r%s: %.2f%% (%s) [%d/%d] [%d/%d]", p.Title, p.Percent, p.Status, p.Downloaded, p.Total, p.PlaylistIndex, p.PlaylistCount)
+				fmt.Printf("\r%s: %.2f%% (%s) [%d/%d] [%d/%d]", p.Title, p.Percent, p.Status, p.DownloadedBytes, p.TotalBytes, p.PlaylistIndex, p.PlaylistCount)
 			} else {
-				fmt.Printf("\r%s: %.2f%% (%s) [%d/%d]", p.Title, p.Percent, p.Status, p.Downloaded, p.Total)
+				fmt.Printf("\r%s: %.2f%% (%s) [%d/%d]", p.Title, p.Percent, p.Status, p.DownloadedBytes, p.TotalBytes)
 			}
 		}).
 		Run(context.TODO(), "https://www.youtube.com/watch?v=dQw4w9WgXcQ")
