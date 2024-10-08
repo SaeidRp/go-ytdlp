@@ -737,7 +737,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Update Notes",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#update",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#update",
 			},
 		},
 		DefaultFlag: "--update",
@@ -766,7 +766,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Update Notes",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#update",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#update",
 			},
 		},
 		DefaultFlag: "--update-to",
@@ -1030,7 +1030,7 @@ var (
 		DefaultFlag:    "--color",
 		ArgNames:       []string{"policy"},
 		Executable:     false,
-		Help:           "Whether to emit color codes in output, optionally prefixed by the STREAM (stdout or stderr) to apply the setting to. Can be one of \"always\", \"auto\" (default), \"never\", or \"no_color\" (use non color terminal sequences). Can be used multiple times",
+		Help:           "Whether to emit color codes in output, optionally prefixed by the STREAM (stdout or stderr) to apply the setting to. Can be one of \"always\", \"auto\" (default), \"never\", or \"no_color\" (use non color terminal sequences). Use \"auto-tty\" or \"no_color-tty\" to decide based on terminal support only. Can be used multiple times",
 		MetaArgs:       "[STREAM:]POLICY",
 		Type:           "string",
 		LongFlags:      []string{"--color"},
@@ -1044,7 +1044,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Compatibility Options",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#differences-in-default-behavior",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#differences-in-default-behavior",
 			},
 		},
 		DefaultFlag: "--compat-options",
@@ -1428,7 +1428,7 @@ var (
 		DefaultFlag:    "--match-filters",
 		ArgNames:       []string{"filter"},
 		Executable:     false,
-		Help:           "Generic video filter. Any \"OUTPUT TEMPLATE\" field can be compared with a number or a string using the operators defined in \"Filtering Formats\". You can also simply specify a field to match if the field is present, use \"!field\" to check if the field is not present, and \"&\" to check multiple conditions. Use a \"\\\" to escape \"&\" or quotes if needed. If used multiple times, the filter matches if at least one of the conditions is met. E.g. --match-filter !is_live --match-filter \"like_count>?100 & description~='(?i)\\bcats \\& dogs\\b'\" matches only videos that are not live OR those that have a like count more than 100 (or the like field is not available) and also has a description that contains the phrase \"cats & dogs\" (caseless). Use \"--match-filter -\" to interactively ask whether to download each video",
+		Help:           "Generic video filter. Any \"OUTPUT TEMPLATE\" field can be compared with a number or a string using the operators defined in \"Filtering Formats\". You can also simply specify a field to match if the field is present, use \"!field\" to check if the field is not present, and \"&\" to check multiple conditions. Use a \"\\\" to escape \"&\" or quotes if needed. If used multiple times, the filter matches if at least one of the conditions is met. E.g. --match-filters !is_live --match-filters \"like_count>?100 & description~='(?i)\\bcats \\& dogs\\b'\" matches only videos that are not live OR those that have a like count more than 100 (or the like field is not available) and also has a description that contains the phrase \"cats & dogs\" (caseless). Use \"--match-filters -\" to interactively ask whether to download each video",
 		MetaArgs:       "FILTER",
 		Type:           "string",
 		LongFlags:      []string{"--match-filters"},
@@ -1441,7 +1441,7 @@ var (
 		NamePascalCase: "NoMatchFilters",
 		DefaultFlag:    "--no-match-filters",
 		Executable:     false,
-		Help:           "Do not use any --match-filter (default)",
+		Help:           "Do not use any --match-filters (default)",
 		Type:           "bool",
 		LongFlags:      []string{"--no-match-filters"},
 	}
@@ -1585,7 +1585,7 @@ var (
 		NamePascalCase: "BreakPerInput",
 		DefaultFlag:    "--break-per-input",
 		Executable:     false,
-		Help:           "Alters --max-downloads, --break-on-existing, --break-match-filter, and autonumber to reset per input URL",
+		Help:           "Alters --max-downloads, --break-on-existing, --break-match-filters, and autonumber to reset per input URL",
 		Type:           "bool",
 		LongFlags:      []string{"--break-per-input"},
 	}
@@ -2045,7 +2045,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--output",
@@ -2801,7 +2801,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--dump-json",
@@ -3151,15 +3151,15 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Format Selection",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#format-selection",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#format-selection",
 			},
 			{
 				Name: "Filter Formatting",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#filtering-formats",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#filtering-formats",
 			},
 			{
 				Name: "Format Selection Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#format-selection-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#format-selection-examples",
 			},
 		},
 		DefaultFlag: "--format",
@@ -3180,11 +3180,11 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Sorting Formats",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#sorting-formats",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#sorting-formats",
 			},
 			{
 				Name: "Format Selection Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#format-selection-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#format-selection-examples",
 			},
 		},
 		DefaultFlag: "--format-sort",
@@ -3205,7 +3205,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Sorting Formats",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#sorting-formats",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#sorting-formats",
 			},
 		},
 		DefaultFlag: "--format-sort-force",
@@ -3235,7 +3235,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Format Selection",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#format-selection",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#format-selection",
 			},
 		},
 		DefaultFlag: "--video-multistreams",
@@ -3263,7 +3263,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Format Selection",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#format-selection",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#format-selection",
 			},
 		},
 		DefaultFlag: "--audio-multistreams",
@@ -3944,11 +3944,11 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Modifying Metadata",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#modifying-metadata",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#modifying-metadata",
 			},
 			{
 				Name: "Modifying Metadata Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#modifying-metadata-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#modifying-metadata-examples",
 			},
 		},
 		DefaultFlag: "--parse-metadata",
@@ -3968,11 +3968,11 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Modifying Metadata",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#modifying-metadata",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#modifying-metadata",
 			},
 			{
 				Name: "Modifying Metadata Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#modifying-metadata-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#modifying-metadata-examples",
 			},
 		},
 		DefaultFlag: "--replace-in-metadata",
@@ -4003,7 +4003,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--concat-playlist",
@@ -4127,7 +4127,7 @@ var (
 		DefaultFlag:    "--convert-subs",
 		ArgNames:       []string{"format"},
 		Executable:     false,
-		Help:           "Convert the subtitles to another format (currently supported: ass, lrc, srt, vtt)",
+		Help:           "Convert the subtitles to another format (currently supported: ass, lrc, srt, vtt). Use \"--convert-subs none\" to disable conversion (default)",
 		MetaArgs:       "FORMAT",
 		Type:           "string",
 		LongFlags:      []string{"--convert-subs", "--convert-sub", "--convert-subtitles"},
@@ -4141,7 +4141,7 @@ var (
 		DefaultFlag:    "--convert-thumbnails",
 		ArgNames:       []string{"format"},
 		Executable:     false,
-		Help:           "Convert the thumbnails to another format (currently supported: jpg, png, webp). You can specify multiple rules using similar syntax as --remux-video",
+		Help:           "Convert the thumbnails to another format (currently supported: jpg, png, webp). You can specify multiple rules using similar syntax as \"--remux-video\". Use \"--convert-thumbnails none\" to disable conversion (default)",
 		MetaArgs:       "FORMAT",
 		Type:           "string",
 		LongFlags:      []string{"--convert-thumbnails"},
@@ -4155,7 +4155,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--split-chapters",
@@ -4471,7 +4471,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Extractor Arguments",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.07.02/README.md#extractor-arguments",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2024.10.07/README.md#extractor-arguments",
 			},
 		},
 		DefaultFlag: "--extractor-args",
