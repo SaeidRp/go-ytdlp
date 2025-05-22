@@ -180,6 +180,12 @@ func TestBuilder_General_NonExecutable(t *testing.T) {
 		_ = builder.UnsetCompatOptions()
 		validateFlagRemoved(t, builder, "compat_opts", "--compat-options")
 	})
+	t.Run("PresetAlias", func(t *testing.T) {
+		builder := New().PresetAlias("test")
+		validateFlagAdded(t, builder, "preset-alias", "--preset-alias", 1)
+		_ = builder.UnsetPresetAlias()
+		validateFlagRemoved(t, builder, "preset-alias", "--preset-alias")
+	})
 }
 
 func TestBuilder_Network_NonExecutable(t *testing.T) {
@@ -895,8 +901,8 @@ func TestBuilder_Filesystem_NonExecutable(t *testing.T) {
 func TestBuilder_Thumbnail_NonExecutable(t *testing.T) {
 	MustInstall(context.Background(), nil)
 	t.Run("WriteThumbnail", func(t *testing.T) {
-		builder := New().WriteThumbnail("test")
-		validateFlagAdded(t, builder, "writethumbnail", "--write-thumbnail", 1)
+		builder := New().WriteThumbnail()
+		validateFlagAdded(t, builder, "writethumbnail", "--write-thumbnail", 0)
 		_ = builder.UnsetWriteThumbnail()
 		validateFlagRemoved(t, builder, "writethumbnail", "--write-thumbnail")
 	})

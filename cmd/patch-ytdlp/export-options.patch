@@ -1,19 +1,13 @@
 diff --git a/yt_dlp/options.py b/yt_dlp/options.py
-index 76db06c..79a54e9 100644
+index 76d401c..5dcfcb8 100644
 --- a/yt_dlp/options.py
 +++ b/yt_dlp/options.py
-@@ -7,6 +7,7 @@
- import shutil
- import string
- import sys
+@@ -2,2 +2,3 @@
+ import contextlib
 +import json
- 
- from .compat import compat_expanduser
- from .cookies import SUPPORTED_BROWSERS, SUPPORTED_KEYRINGS
-@@ -267,6 +268,81 @@ def _dict_from_options_callback(
-             out_dict[key] = [*out_dict.get(key, []), val] if append else val
-         setattr(parser.values, option.dest, out_dict)
- 
+ import optparse
+@@ -294,2 +295,83 @@ def _dict_from_options_callback(
+
 +    def _export_options_callback(option, opt_str, value, parser: _YoutubeDLOptionParser):
 +        from .extractor import list_extractor_classes
 +        from .extractor.generic import GenericIE # Importing GenericIE is currently slow since it imports YoutubeIE
@@ -66,10 +60,16 @@ index 76db06c..79a54e9 100644
 +                    'type': str(option.type) if option.type else None,
 +                    'long_flags': option._long_opts,
 +                    'short_flags': option._short_opts,
-+                    'nargs': option.nargs or 0,
++                    'nargs': option.nargs if option.nargs and option.nargs > 0 and option.takes_value() else 0,
 +                    'default_value': default,
 +                    'const_value': option.const,
 +                }
++
++                if not option_data['id'] or option_data['id'] == '_':
++                    if option._long_opts:
++                        option_data['id'] = option._long_opts[-1].lstrip('-')
++                    elif option.callback:
++                        option_data['id'] = option.callback.__name__.lstrip('_')
 +
 +                if not option_data['type']:
 +                    if option.action == 'store_true' or option.action == 'store_false':
@@ -90,17 +90,10 @@ index 76db06c..79a54e9 100644
 +        sys.exit()
 +
      def when_prefix(default):
-         return {
-             'default': {},
-@@ -499,6 +575,11 @@ def _alias_callback(option, opt_str, value, parser, opts, nargs):
-             f'As a safety measure, each alias may be triggered a maximum of {_YoutubeDLOptionParser.ALIAS_TRIGGER_LIMIT} times. '
-             'This option can be used multiple times'))
- 
+@@ -352,2 +434,6 @@ def _preset_alias_callback(option, opt_str, value, parser):
+     general = optparse.OptionGroup(parser, 'General Options')
 +    general.add_option(
 +        '--export-options',
 +        action='callback', default=False, callback=_export_options_callback,
 +        help=optparse.SUPPRESS_HELP)
-+
-     network = optparse.OptionGroup(parser, 'Network Options')
-     network.add_option(
-         '--proxy', dest='proxy',
+     general.add_option(
