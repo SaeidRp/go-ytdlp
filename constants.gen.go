@@ -11,7 +11,7 @@ const (
 	Channel = "stable"
 
 	// Version of yt-dlp that go-ytdlp was generated with.
-	Version = "2025.06.09"
+	Version = "2025.06.30"
 )
 
 // Extractor contains information about a specific yt-dlp extractor. Extractors are
@@ -604,9 +604,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "HollywoodReporterPlaylist"},
 	{Name: "Holodex"},
 	{Name: "HotNewHipHop", Description: "(Currently broken)"},
-	{Name: "hotstar"},
-	{Name: "hotstar:playlist"},
-	{Name: "hotstar:season"},
+	{Name: "hotstar", Description: "JioHotstar"},
 	{Name: "hotstar:series"},
 	{Name: "HotStarPrefix", Description: "[HIDDEN]"},
 	{Name: "href.li", Description: "[HIDDEN]"},
@@ -621,7 +619,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Hungama"},
 	{Name: "HungamaAlbumPlaylist"},
 	{Name: "HungamaSong"},
-	{Name: "huya:live", Description: "huya.com"},
+	{Name: "huya:live", Description: "虎牙直播"},
 	{Name: "huya:video", Description: "虎牙视频"},
 	{Name: "Hypem"},
 	{Name: "Hytale"},
@@ -678,8 +676,6 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Jamendo"},
 	{Name: "JamendoAlbum"},
 	{Name: "JeuxVideo", Description: "(Currently broken)"},
-	{Name: "jiocinema", Description: "[jiocinema]", AgeLimit: 13},
-	{Name: "jiocinema:series", Description: "[jiocinema]"},
 	{Name: "jiosaavn:album"},
 	{Name: "jiosaavn:artist"},
 	{Name: "jiosaavn:playlist"},
@@ -808,6 +804,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "massengeschmack.tv"},
 	{Name: "Masters"},
 	{Name: "MatchTV"},
+	{Name: "Mave", AgeLimit: 18},
 	{Name: "MBN", Description: "mbn.co.kr (매일방송)"},
 	{Name: "MDR", Description: "MDR.DE"},
 	{Name: "MedalTV"},
@@ -865,7 +862,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Mojevideo", Description: "mojevideo.sk"},
 	{Name: "Mojvideo"},
 	{Name: "Monstercat"},
-	{Name: "MonsterSirenHypergryphMusic"},
+	{Name: "monstersiren", Description: "塞壬唱片"},
 	{Name: "Motherless", AgeLimit: 18},
 	{Name: "MotherlessGallery"},
 	{Name: "MotherlessGroup"},
@@ -1334,6 +1331,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Sangiin", Description: "参議院インターネット審議中継 (archive)"},
 	{Name: "SangiinInstruction", Description: "[HIDDEN]"},
 	{Name: "Sapo", Description: "SAPO Vídeos"},
+	{Name: "SaucePlus", Description: "Sauce+"},
 	{Name: "SBS", Description: "sbs.com.au"},
 	{Name: "sbs.co.kr", AgeLimit: 15},
 	{Name: "sbs.co.kr:allvod_program"},
