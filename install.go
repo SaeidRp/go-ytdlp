@@ -41,20 +41,35 @@ var (
 		src  string
 		dest []string
 	}{
-		"darwin_amd64":  {"yt-dlp_macos", []string{"yt-dlp-" + Version, "yt-dlp"}},
-		"darwin_arm64":  {"yt-dlp_macos", []string{"yt-dlp-" + Version, "yt-dlp"}},
-		"linux_amd64":   {"yt-dlp_linux", []string{"yt-dlp-" + Version, "yt-dlp"}},
-		"linux_arm64":   {"yt-dlp_linux_aarch64", []string{"yt-dlp-" + Version, "yt-dlp"}},
-		"linux_armv7l":  {"yt-dlp_linux_armv7l", []string{"yt-dlp-" + Version, "yt-dlp"}},
-		"linux_unknown": {"yt-dlp", []string{"yt-dlp-" + Version, "yt-dlp"}},
-		"windows_amd64": {"yt-dlp.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
+		"darwin_amd64":      {"yt-dlp_macos", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"darwin_arm64":      {"yt-dlp_macos", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"linux_amd64":       {"yt-dlp_linux", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"linux_amd64_musl":  {"yt-dlp_musllinux", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"linux_arm64":       {"yt-dlp_linux_aarch64", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"linux_arm64_musl":  {"yt-dlp_musllinux_aarch64", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"linux_armv7l":      {"yt-dlp_linux_armv7l", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"linux_unknown":     {"yt-dlp", []string{"yt-dlp-" + Version, "yt-dlp"}},
+		"windows_amd64":     {"yt-dlp.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
+		"windows_amd64_arm": {"yt-dlp_arm64.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
+		"windows_amd64_x86": {"yt-dlp_x86.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
 	}
 )
+
+// isAlpineLinux returns true if the current system is Alpine Linux.
+func isAlpineLinux() bool {
+	_, err := os.Stat("/etc/alpine-release")
+	return err == nil
+}
 
 // getDownloadBinary returns the source and destination binary names for the
 // current runtime. If the current runtime is not supported, an error is
 // returned. dest will always be returned (it will be an assumption).
 func getDownloadBinary() (src string, dest []string, err error) {
+	if runtime.GOOS == "linux" && isAlpineLinux() {
+		if binary, ok := binConfigs[runtime.GOOS+"_"+runtime.GOARCH+"_musl"]; ok {
+			return binary.src, binary.dest, nil
+		}
+	}
 	if binary, ok := binConfigs[runtime.GOOS+"_"+runtime.GOARCH]; ok {
 		return binary.src, binary.dest, nil
 	}
