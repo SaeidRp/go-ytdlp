@@ -114,6 +114,30 @@ func TestBuilder_General_NonExecutable(t *testing.T) {
 		_ = builder.UnsetPluginDirs()
 		validateFlagRemoved(t, builder, "plugin_dirs", "--no-plugin-dirs")
 	})
+	t.Run("JsRuntimes", func(t *testing.T) {
+		builder := New().JsRuntimes("test")
+		validateFlagAdded(t, builder, "js_runtimes", "--js-runtimes", 1)
+		_ = builder.UnsetJsRuntimes()
+		validateFlagRemoved(t, builder, "js_runtimes", "--js-runtimes")
+	})
+	t.Run("NoJsRuntimes", func(t *testing.T) {
+		builder := New().NoJsRuntimes()
+		validateFlagAdded(t, builder, "js_runtimes", "--no-js-runtimes", 0)
+		_ = builder.UnsetJsRuntimes()
+		validateFlagRemoved(t, builder, "js_runtimes", "--no-js-runtimes")
+	})
+	t.Run("RemoteComponents", func(t *testing.T) {
+		builder := New().RemoteComponents("test")
+		validateFlagAdded(t, builder, "remote_components", "--remote-components", 1)
+		_ = builder.UnsetRemoteComponents()
+		validateFlagRemoved(t, builder, "remote_components", "--remote-components")
+	})
+	t.Run("NoRemoteComponents", func(t *testing.T) {
+		builder := New().NoRemoteComponents()
+		validateFlagAdded(t, builder, "remote_components", "--no-remote-components", 0)
+		_ = builder.UnsetRemoteComponents()
+		validateFlagRemoved(t, builder, "remote_components", "--no-remote-components")
+	})
 	t.Run("FlatPlaylist", func(t *testing.T) {
 		builder := New().FlatPlaylist()
 		validateFlagAdded(t, builder, "extract_flat", "--flat-playlist", 0)

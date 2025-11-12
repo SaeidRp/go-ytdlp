@@ -30,7 +30,7 @@ func (c *Command) Version(ctx context.Context) (*Result, error) {
 // Use git to pull the latest changes
 //
 // References:
-//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#update
+//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#update
 //
 // Additional information:
 //   - Update maps to cli flags: -U/--update.
@@ -72,7 +72,7 @@ func (c *Command) UnsetUpdate() *Command {
 // "UPDATE" for details. Supported channels: stable, nightly, master
 //
 // References:
-//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#update
+//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#update
 //
 // Additional information:
 //   - UpdateTo maps to cli flags: --update-to=[CHANNEL]@[TAG].
@@ -324,13 +324,13 @@ func (c *Command) ConfigLocations(path string) *Command {
 //
 // Additional information:
 //   - See [Command.UnsetPluginDirs], for unsetting the flag.
-//   - PluginDirs maps to cli flags: --plugin-dirs=PATH.
+//   - PluginDirs maps to cli flags: --plugin-dirs=DIR.
 //   - From option group: "General"
-func (c *Command) PluginDirs(path string) *Command {
+func (c *Command) PluginDirs(dir string) *Command {
 	c.addFlag(&Flag{
 		ID:   "plugin_dirs",
 		Flag: "--plugin-dirs",
-		Args: []string{path},
+		Args: []string{dir},
 	})
 	return c
 }
@@ -354,6 +354,95 @@ func (c *Command) NoPluginDirs() *Command {
 	c.addFlag(&Flag{
 		ID:   "plugin_dirs",
 		Flag: "--no-plugin-dirs",
+		Args: nil,
+	})
+	return c
+}
+
+// Additional JavaScript runtime to enable, with an optional location for the
+// runtime (either the path to the binary or its containing directory). This option
+// can be used multiple times to enable multiple runtimes. Supported runtimes are
+// (in order of priority, from highest to lowest): deno, node, quickjs, bun. Only
+// "deno" is enabled by default. The highest priority runtime that is both enabled
+// and available will be used. In order to use a lower priority runtime when "deno"
+// is available, --no-js-runtimes needs to be passed before enabling other runtimes
+//
+// Additional information:
+//   - See [Command.UnsetJsRuntimes], for unsetting the flag.
+//   - JsRuntimes maps to cli flags: --js-runtimes=RUNTIME[:PATH].
+//   - From option group: "General"
+func (c *Command) JsRuntimes(runtime string) *Command {
+	c.addFlag(&Flag{
+		ID:   "js_runtimes",
+		Flag: "--js-runtimes",
+		Args: []string{runtime},
+	})
+	return c
+}
+
+// UnsetJsRuntimes unsets any flags that were previously set by one of:
+//   - [Command.JsRuntimes]
+//   - [Command.NoJsRuntimes]
+func (c *Command) UnsetJsRuntimes() *Command {
+	c.removeFlagByID("js_runtimes")
+	return c
+}
+
+// Clear JavaScript runtimes to enable, including defaults and those provided by
+// previous --js-runtimes
+//
+// Additional information:
+//   - See [Command.UnsetJsRuntimes], for unsetting the flag.
+//   - NoJsRuntimes maps to cli flags: --no-js-runtimes.
+//   - From option group: "General"
+func (c *Command) NoJsRuntimes() *Command {
+	c.addFlag(&Flag{
+		ID:   "js_runtimes",
+		Flag: "--no-js-runtimes",
+		Args: nil,
+	})
+	return c
+}
+
+// Remote components to allow yt-dlp to fetch when required. This option is
+// currently not needed if you are using an official executable or have the
+// requisite version of the yt-dlp-ejs package installed. You can use this option
+// multiple times to allow multiple components. Supported values: ejs:npm (external
+// JavaScript components from npm), ejs:github (external JavaScript components from
+// yt-dlp-ejs GitHub). By default, no remote components are allowed
+//
+// Additional information:
+//   - See [Command.UnsetRemoteComponents], for unsetting the flag.
+//   - RemoteComponents maps to cli flags: --remote-components=COMPONENT.
+//   - From option group: "General"
+func (c *Command) RemoteComponents(component string) *Command {
+	c.addFlag(&Flag{
+		ID:   "remote_components",
+		Flag: "--remote-components",
+		Args: []string{component},
+	})
+	return c
+}
+
+// UnsetRemoteComponents unsets any flags that were previously set by one of:
+//   - [Command.RemoteComponents]
+//   - [Command.NoRemoteComponents]
+func (c *Command) UnsetRemoteComponents() *Command {
+	c.removeFlagByID("remote_components")
+	return c
+}
+
+// Disallow fetching of all remote components, including any previously allowed by
+// --remote-components or defaults.
+//
+// Additional information:
+//   - See [Command.UnsetRemoteComponents], for unsetting the flag.
+//   - NoRemoteComponents maps to cli flags: --no-remote-components.
+//   - From option group: "General"
+func (c *Command) NoRemoteComponents() *Command {
+	c.addFlag(&Flag{
+		ID:   "remote_components",
+		Flag: "--no-remote-components",
 		Args: nil,
 	})
 	return c
@@ -567,7 +656,7 @@ func (c *Command) UnsetColor() *Command {
 // in default behavior" for details
 //
 // References:
-//   - Compatibility Options: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#differences-in-default-behavior
+//   - Compatibility Options: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#differences-in-default-behavior
 //
 // Additional information:
 //   - See [Command.UnsetCompatOptions], for unsetting the flag.
@@ -2227,7 +2316,7 @@ func (c *Command) UnsetPaths() *Command {
 // Output filename template; see "OUTPUT TEMPLATE" for details
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetOutput], for unsetting the flag.
@@ -3504,7 +3593,7 @@ func (c *Command) UnsetGetFormat() *Command {
 // is used. See "OUTPUT TEMPLATE" for a description of available keys
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetDumpJSON], for unsetting the flag.
@@ -4098,9 +4187,9 @@ func (c *Command) UnsetSleepSubtitles() *Command {
 // Video format code, see "FORMAT SELECTION" for more details
 //
 // References:
-//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#format-selection
-//   - Filter Formatting: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#filtering-formats
-//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#format-selection-examples
+//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#format-selection
+//   - Filter Formatting: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#filtering-formats
+//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#format-selection-examples
 //
 // Additional information:
 //   - See [Command.UnsetFormat], for unsetting the flag.
@@ -4125,8 +4214,8 @@ func (c *Command) UnsetFormat() *Command {
 // Sort the formats by the fields given, see "Sorting Formats" for more details
 //
 // References:
-//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#sorting-formats
-//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#format-selection-examples
+//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#sorting-formats
+//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#format-selection-examples
 //
 // Additional information:
 //   - See [Command.UnsetFormatSort], for unsetting the flag.
@@ -4152,7 +4241,7 @@ func (c *Command) UnsetFormatSort() *Command {
 // Formats" for more details
 //
 // References:
-//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#sorting-formats
+//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#sorting-formats
 //
 // Additional information:
 //   - See [Command.UnsetFormatSortForce], for unsetting the flag.
@@ -4193,7 +4282,7 @@ func (c *Command) NoFormatSortForce() *Command {
 // Allow multiple video streams to be merged into a single file
 //
 // References:
-//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#format-selection
+//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#format-selection
 //
 // Additional information:
 //   - See [Command.UnsetVideoMultistreams], for unsetting the flag.
@@ -4234,7 +4323,7 @@ func (c *Command) NoVideoMultistreams() *Command {
 // Allow multiple audio streams to be merged into a single file
 //
 // References:
-//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#format-selection
+//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#format-selection
 //
 // Additional information:
 //   - See [Command.UnsetAudioMultistreams], for unsetting the flag.
@@ -5412,8 +5501,8 @@ func (c *Command) UnsetMetadataFromTitle() *Command {
 // --use-postprocessor (default: pre_process)
 //
 // References:
-//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#modifying-metadata
-//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#modifying-metadata-examples
+//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#modifying-metadata
+//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#modifying-metadata-examples
 //
 // Additional information:
 //   - See [Command.UnsetParseMetadata], for unsetting the flag.
@@ -5440,8 +5529,8 @@ func (c *Command) UnsetParseMetadata() *Command {
 // --use-postprocessor (default: pre_process)
 //
 // References:
-//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#modifying-metadata
-//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#modifying-metadata-examples
+//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#modifying-metadata
+//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#modifying-metadata-examples
 //
 // Additional information:
 //   - See [Command.UnsetReplaceInMetadata], for unsetting the flag.
@@ -5501,7 +5590,7 @@ var (
 // the concatenated files. See "OUTPUT TEMPLATE" for details
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetConcatPlaylist], for unsetting the flag.
@@ -5714,7 +5803,7 @@ func (c *Command) UnsetConvertThumbnails() *Command {
 // the split files. See "OUTPUT TEMPLATE" for details
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetSplitChapters], for unsetting the flag.
@@ -5864,8 +5953,8 @@ func (c *Command) UnsetUsePostProcessor() *Command {
 
 // SponsorBlock categories to create chapters for, separated by commas. Available
 // categories are sponsor, intro, outro, selfpromo, preview, filler, interaction,
-// music_offtopic, poi_highlight, chapter, all and default (=all). You can prefix
-// the category with a "-" to exclude it. See [1] for descriptions of the
+// music_offtopic, hook, poi_highlight, chapter, all and default (=all). You can
+// prefix the category with a "-" to exclude it. See [1] for descriptions of the
 // categories. E.g. --sponsorblock-mark all,-preview [1]
 // https://wiki.sponsor.ajay.app/w/Segment_Categories
 //
@@ -6094,7 +6183,7 @@ func (c *Command) NoHLSSplitDiscontinuity() *Command {
 // extractors
 //
 // References:
-//   - Extractor Arguments: https://github.com/yt-dlp/yt-dlp/blob/2025.10.22/README.md#extractor-arguments
+//   - Extractor Arguments: https://github.com/yt-dlp/yt-dlp/blob/2025.11.12/README.md#extractor-arguments
 //
 // Additional information:
 //   - See [Command.UnsetExtractorArgs], for unsetting the flag.

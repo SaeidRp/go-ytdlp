@@ -11,7 +11,7 @@ const (
 	Channel = "stable"
 
 	// Version of yt-dlp that go-ytdlp was generated with.
-	Version = "2025.10.22"
+	Version = "2025.11.12"
 )
 
 // Extractor contains information about a specific yt-dlp extractor. Extractors are
@@ -36,6 +36,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "17live:vod"},
 	{Name: "1News", Description: "1news.co.nz article videos"},
 	{Name: "1tv", Description: "Первый канал"},
+	{Name: "1tv:live", Description: "Первый канал (прямой эфир)"},
 	{Name: "20min", Description: "(Currently broken)"},
 	{Name: "23video"},
 	{Name: "247sports", Description: "(Currently broken)"},
@@ -117,6 +118,8 @@ var SupportedExtractors = []*Extractor{
 	{Name: "archive.org", Description: "archive.org video and audio"},
 	{Name: "ArcPublishing"},
 	{Name: "ARD"},
+	{Name: "ARDAudiothek"},
+	{Name: "ARDAudiothekPlaylist"},
 	{Name: "ARDMediathek"},
 	{Name: "ARDMediathekCollection"},
 	{Name: "Art19"},
@@ -562,7 +565,6 @@ var SupportedExtractors = []*Extractor{
 	{Name: "google:podcasts:feed"},
 	{Name: "GoogleDrive"},
 	{Name: "GoogleDrive:Folder"},
-	{Name: "GoPlay", Description: "[goplay]"},
 	{Name: "GoPro"},
 	{Name: "Goshgay", AgeLimit: 18},
 	{Name: "GoToStage"},
@@ -877,6 +879,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "MusicdexArtist"},
 	{Name: "MusicdexPlaylist"},
 	{Name: "MusicdexSong"},
+	{Name: "Mux"},
 	{Name: "Mx3"},
 	{Name: "Mx3Neo"},
 	{Name: "Mx3Volksmusik"},
@@ -891,6 +894,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "n-tv.de"},
 	{Name: "N1Info:article"},
 	{Name: "N1InfoAsset"},
+	{Name: "NascarClassics"},
 	{Name: "Nate", AgeLimit: 15},
 	{Name: "NateProgram"},
 	{Name: "natgeo:video"},
@@ -1105,6 +1109,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "PlanetMarathi"},
 	{Name: "Platzi", Description: "[platzi]"},
 	{Name: "PlatziCourse", Description: "[platzi]"},
+	{Name: "play.tv", Description: "[goplay] PLAY (formerly goplay.be)"},
 	{Name: "player.sky.it"},
 	{Name: "PlayerFm"},
 	{Name: "playeur"},
@@ -1597,12 +1602,12 @@ var SupportedExtractors = []*Extractor{
 	{Name: "TwitCastingLive"},
 	{Name: "TwitCastingUser"},
 	{Name: "twitch:clips", Description: "[twitch]"},
+	{Name: "twitch:collection", Description: "[twitch]"},
 	{Name: "twitch:stream", Description: "[twitch]"},
+	{Name: "twitch:videos", Description: "[twitch]"},
+	{Name: "twitch:videos:clips", Description: "[twitch]"},
+	{Name: "twitch:videos:collections", Description: "[twitch]"},
 	{Name: "twitch:vod", Description: "[twitch]"},
-	{Name: "TwitchCollection", Description: "[twitch]"},
-	{Name: "TwitchVideos", Description: "[twitch]"},
-	{Name: "TwitchVideosClips", Description: "[twitch]"},
-	{Name: "TwitchVideosCollections", Description: "[twitch]"},
 	{Name: "twitter", Description: "[twitter]", AgeLimit: 18},
 	{Name: "twitter:amplify", Description: "[twitter]"},
 	{Name: "twitter:broadcast", Description: "[twitter]"},
