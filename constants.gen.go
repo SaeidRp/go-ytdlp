@@ -11,7 +11,7 @@ const (
 	Channel = "stable"
 
 	// Version of yt-dlp that go-ytdlp was generated with.
-	Version = "2025.11.12"
+	Version = "2025.12.08"
 )
 
 // Extractor contains information about a specific yt-dlp extractor. Extractors are
@@ -74,8 +74,10 @@ var SupportedExtractors = []*Extractor{
 	{Name: "aenetworks:collection"},
 	{Name: "aenetworks:show"},
 	{Name: "AeonCo"},
+	{Name: "agalega:videos"},
 	{Name: "AirTV"},
 	{Name: "AitubeKZVideo"},
+	{Name: "Alibaba"},
 	{Name: "AliExpressLive"},
 	{Name: "AlJazeera"},
 	{Name: "Allocine"},
@@ -214,6 +216,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Biography"},
 	{Name: "BitChute"},
 	{Name: "BitChuteChannel"},
+	{Name: "Bitmovin"},
 	{Name: "BlackboardCollaborate"},
 	{Name: "BlackboardCollaborateLaunch"},
 	{Name: "BleacherReport", Description: "(Currently broken)"},
@@ -763,7 +766,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "loc", Description: "Library of Congress"},
 	{Name: "Loco"},
 	{Name: "loom"},
-	{Name: "loom:folder"},
+	{Name: "loom:folder", Description: "(Currently broken)"},
 	{Name: "LoveHomePorn", AgeLimit: 18},
 	{Name: "LRTRadio"},
 	{Name: "LRTStream"},
@@ -794,7 +797,8 @@ var SupportedExtractors = []*Extractor{
 	{Name: "massengeschmack.tv"},
 	{Name: "Masters"},
 	{Name: "MatchTV"},
-	{Name: "Mave", AgeLimit: 18},
+	{Name: "mave", AgeLimit: 18},
+	{Name: "mave:channel"},
 	{Name: "MBN", Description: "mbn.co.kr (매일방송)"},
 	{Name: "MDR", Description: "MDR.DE"},
 	{Name: "MedalTV"},
@@ -928,6 +932,8 @@ var SupportedExtractors = []*Extractor{
 	{Name: "NerdCubedFeed"},
 	{Name: "Nest"},
 	{Name: "NestClip"},
+	{Name: "NetAppCollection"},
+	{Name: "NetAppVideo"},
 	{Name: "netease:album", Description: "网易云音乐 - 专辑"},
 	{Name: "netease:djradio", Description: "网易云音乐 - 电台"},
 	{Name: "netease:mv", Description: "网易云音乐 - MV"},
@@ -995,6 +1001,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Nova", Description: "TN.cz, Prásk.tv, Nova.cz, Novaplus.cz, FANDA.tv, Krásná.cz and Doma.cz"},
 	{Name: "NovaEmbed"},
 	{Name: "NovaPlay"},
+	{Name: "NowCanal"},
 	{Name: "nowness"},
 	{Name: "nowness:playlist"},
 	{Name: "nowness:series"},
@@ -1409,7 +1416,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "Spiegel"},
 	{Name: "Sport5"},
 	{Name: "SportBox", Description: "(Currently broken)"},
-	{Name: "SportDeutschland"},
+	{Name: "sporteurope"},
 	{Name: "Spreaker"},
 	{Name: "SpreakerShow"},
 	{Name: "SpringboardPlatform"},
@@ -1498,6 +1505,8 @@ var SupportedExtractors = []*Extractor{
 	{Name: "TFO", Description: "(Currently broken)"},
 	{Name: "theatercomplextown:ppv", Description: "[theatercomplextown]"},
 	{Name: "theatercomplextown:vod", Description: "[theatercomplextown]"},
+	{Name: "TheChosen"},
+	{Name: "TheChosenGroup"},
 	{Name: "TheGuardianPodcast"},
 	{Name: "TheGuardianPodcastPlaylist"},
 	{Name: "TheHighWire"},
@@ -1818,6 +1827,7 @@ var SupportedExtractors = []*Extractor{
 	{Name: "YapFiles", Description: "(Currently broken)"},
 	{Name: "Yappy", Description: "(Currently broken)"},
 	{Name: "YappyProfile"},
+	{Name: "yfanefa"},
 	{Name: "YleAreena", AgeLimit: 7},
 	{Name: "YouJizz", AgeLimit: 18},
 	{Name: "youku", Description: "优酷"},
