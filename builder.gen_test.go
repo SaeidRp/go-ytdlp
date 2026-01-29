@@ -1207,7 +1207,7 @@ func TestBuilder_Workaround_NonExecutable(t *testing.T) {
 		validateFlagRemoved(t, builder, "max_sleep_interval", "--max-sleep-interval")
 	})
 	t.Run("SleepSubtitles", func(t *testing.T) {
-		builder := New().SleepSubtitles(1)
+		builder := New().SleepSubtitles(1.0)
 		validateFlagAdded(t, builder, "sleep_interval_subtitles", "--sleep-subtitles", 1)
 		_ = builder.UnsetSleepSubtitles()
 		validateFlagRemoved(t, builder, "sleep_interval_subtitles", "--sleep-subtitles")
@@ -1227,6 +1227,12 @@ func TestBuilder_VideoFormat_NonExecutable(t *testing.T) {
 		validateFlagAdded(t, builder, "format_sort", "--format-sort", 1)
 		_ = builder.UnsetFormatSort()
 		validateFlagRemoved(t, builder, "format_sort", "--format-sort")
+	})
+	t.Run("FormatSortReset", func(t *testing.T) {
+		builder := New().FormatSortReset()
+		validateFlagAdded(t, builder, "format_sort", "--format-sort-reset", 0)
+		_ = builder.UnsetFormatSortReset()
+		validateFlagRemoved(t, builder, "format_sort", "--format-sort-reset")
 	})
 	t.Run("FormatSortForce", func(t *testing.T) {
 		builder := New().FormatSortForce()
