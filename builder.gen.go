@@ -30,7 +30,7 @@ func (c *Command) Version(ctx context.Context) (*Result, error) {
 // Use git to pull the latest changes
 //
 // References:
-//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#update
+//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#update
 //
 // Additional information:
 //   - Update maps to cli flags: -U/--update.
@@ -72,7 +72,7 @@ func (c *Command) UnsetUpdate() *Command {
 // "UPDATE" for details. Supported channels: stable, nightly, master
 //
 // References:
-//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#update
+//   - Update Notes: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#update
 //
 // Additional information:
 //   - UpdateTo maps to cli flags: --update-to=[CHANNEL]@[TAG].
@@ -656,7 +656,7 @@ func (c *Command) UnsetColor() *Command {
 // in default behavior" for details
 //
 // References:
-//   - Compatibility Options: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#differences-in-default-behavior
+//   - Compatibility Options: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#differences-in-default-behavior
 //
 // Additional information:
 //   - See [Command.UnsetCompatOptions], for unsetting the flag.
@@ -2316,7 +2316,7 @@ func (c *Command) UnsetPaths() *Command {
 // Output filename template; see "OUTPUT TEMPLATE" for details
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetOutput], for unsetting the flag.
@@ -3593,7 +3593,7 @@ func (c *Command) UnsetGetFormat() *Command {
 // is used. See "OUTPUT TEMPLATE" for a description of available keys
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetDumpJSON], for unsetting the flag.
@@ -3973,8 +3973,7 @@ func (c *Command) UnsetCheckCertificates() *Command {
 	return c
 }
 
-// Use an unencrypted connection to retrieve information about the video (Currently
-// supported only for YouTube)
+// Use an unencrypted connection to retrieve information about the video
 //
 // Additional information:
 //   - See [Command.UnsetPreferInsecure], for unsetting the flag.
@@ -4187,9 +4186,9 @@ func (c *Command) UnsetSleepSubtitles() *Command {
 // Video format code, see "FORMAT SELECTION" for more details
 //
 // References:
-//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection
-//   - Filter Formatting: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#filtering-formats
-//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection-examples
+//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection
+//   - Filter Formatting: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#filtering-formats
+//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection-examples
 //
 // Additional information:
 //   - See [Command.UnsetFormat], for unsetting the flag.
@@ -4214,8 +4213,8 @@ func (c *Command) UnsetFormat() *Command {
 // Sort the formats by the fields given, see "Sorting Formats" for more details
 //
 // References:
-//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#sorting-formats
-//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection-examples
+//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#sorting-formats
+//   - Format Selection Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection-examples
 //
 // Additional information:
 //   - See [Command.UnsetFormatSort], for unsetting the flag.
@@ -4263,7 +4262,7 @@ func (c *Command) UnsetFormatSortReset() *Command {
 // Formats" for more details
 //
 // References:
-//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#sorting-formats
+//   - Sorting Formats: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#sorting-formats
 //
 // Additional information:
 //   - See [Command.UnsetFormatSortForce], for unsetting the flag.
@@ -4304,7 +4303,7 @@ func (c *Command) NoFormatSortForce() *Command {
 // Allow multiple video streams to be merged into a single file
 //
 // References:
-//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection
+//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection
 //
 // Additional information:
 //   - See [Command.UnsetVideoMultistreams], for unsetting the flag.
@@ -4345,7 +4344,7 @@ func (c *Command) NoVideoMultistreams() *Command {
 // Allow multiple audio streams to be merged into a single file
 //
 // References:
-//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection
+//   - Format Selection: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection
 //
 // Additional information:
 //   - See [Command.UnsetAudioMultistreams], for unsetting the flag.
@@ -5523,8 +5522,8 @@ func (c *Command) UnsetMetadataFromTitle() *Command {
 // --use-postprocessor (default: pre_process)
 //
 // References:
-//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata
-//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata-examples
+//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata
+//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata-examples
 //
 // Additional information:
 //   - See [Command.UnsetParseMetadata], for unsetting the flag.
@@ -5551,8 +5550,8 @@ func (c *Command) UnsetParseMetadata() *Command {
 // --use-postprocessor (default: pre_process)
 //
 // References:
-//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata
-//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata-examples
+//   - Modifying Metadata: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata
+//   - Modifying Metadata Examples: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata-examples
 //
 // Additional information:
 //   - See [Command.UnsetReplaceInMetadata], for unsetting the flag.
@@ -5612,7 +5611,7 @@ var (
 // the concatenated files. See "OUTPUT TEMPLATE" for details
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetConcatPlaylist], for unsetting the flag.
@@ -5695,7 +5694,9 @@ func (c *Command) UnsetFFmpegLocation() *Command {
 // Execute a command, optionally prefixed with when to execute it, separated by a
 // ":". Supported values of "WHEN" are the same as that of --use-postprocessor
 // (default: after_move). The same syntax as the output template can be used to
-// pass any field as arguments to the command. If no fields are passed,
+// pass any field as arguments to the command; however, for security reasons the
+// only allowed conversions are: "i"/"d" (signed integer decimal), "f"
+// (floating-point decimal) and "q" (shell-quoted). If no fields are passed,
 // %(filepath,_filename|)q is appended to the end of the command. This option can
 // be used multiple times
 //
@@ -5825,7 +5826,7 @@ func (c *Command) UnsetConvertThumbnails() *Command {
 // the split files. See "OUTPUT TEMPLATE" for details
 //
 // References:
-//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template
+//   - Output Template: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template
 //
 // Additional information:
 //   - See [Command.UnsetSplitChapters], for unsetting the flag.
@@ -6205,7 +6206,7 @@ func (c *Command) NoHLSSplitDiscontinuity() *Command {
 // extractors
 //
 // References:
-//   - Extractor Arguments: https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#extractor-arguments
+//   - Extractor Arguments: https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#extractor-arguments
 //
 // Additional information:
 //   - See [Command.UnsetExtractorArgs], for unsetting the flag.

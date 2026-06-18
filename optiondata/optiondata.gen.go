@@ -708,7 +708,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Update Notes",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#update",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#update",
 			},
 		},
 		DefaultFlag: "--update",
@@ -737,7 +737,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Update Notes",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#update",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#update",
 			},
 		},
 		DefaultFlag: "--update-to",
@@ -1079,7 +1079,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Compatibility Options",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#differences-in-default-behavior",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#differences-in-default-behavior",
 			},
 		},
 		DefaultFlag: "--compat-options",
@@ -2045,7 +2045,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--output",
@@ -2775,7 +2775,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--dump-json",
@@ -2979,7 +2979,7 @@ var (
 		NamePascalCase: "PreferInsecure",
 		DefaultFlag:    "--prefer-insecure",
 		Executable:     false,
-		Help:           "Use an unencrypted connection to retrieve information about the video (Currently supported only for YouTube)",
+		Help:           "Use an unencrypted connection to retrieve information about the video",
 		Type:           "bool",
 		LongFlags:      []string{"--prefer-insecure", "--prefer-unsecure"},
 	}
@@ -3100,15 +3100,15 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Format Selection",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection",
 			},
 			{
 				Name: "Filter Formatting",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#filtering-formats",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#filtering-formats",
 			},
 			{
 				Name: "Format Selection Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection-examples",
 			},
 		},
 		DefaultFlag: "--format",
@@ -3129,11 +3129,11 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Sorting Formats",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#sorting-formats",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#sorting-formats",
 			},
 			{
 				Name: "Format Selection Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection-examples",
 			},
 		},
 		DefaultFlag: "--format-sort",
@@ -3165,7 +3165,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Sorting Formats",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#sorting-formats",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#sorting-formats",
 			},
 		},
 		DefaultFlag: "--format-sort-force",
@@ -3195,7 +3195,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Format Selection",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection",
 			},
 		},
 		DefaultFlag: "--video-multistreams",
@@ -3223,7 +3223,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Format Selection",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#format-selection",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#format-selection",
 			},
 		},
 		DefaultFlag: "--audio-multistreams",
@@ -3904,11 +3904,11 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Modifying Metadata",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata",
 			},
 			{
 				Name: "Modifying Metadata Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata-examples",
 			},
 		},
 		DefaultFlag: "--parse-metadata",
@@ -3928,11 +3928,11 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Modifying Metadata",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata",
 			},
 			{
 				Name: "Modifying Metadata Examples",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#modifying-metadata-examples",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#modifying-metadata-examples",
 			},
 		},
 		DefaultFlag: "--replace-in-metadata",
@@ -3963,7 +3963,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--concat-playlist",
@@ -4013,7 +4013,7 @@ var (
 		DefaultFlag:    "--exec",
 		ArgNames:       []string{"cmd"},
 		Executable:     false,
-		Help:           "Execute a command, optionally prefixed with when to execute it, separated by a \":\". Supported values of \"WHEN\" are the same as that of --use-postprocessor (default: after_move). The same syntax as the output template can be used to pass any field as arguments to the command. If no fields are passed, %(filepath,_filename|)q is appended to the end of the command. This option can be used multiple times",
+		Help:           "Execute a command, optionally prefixed with when to execute it, separated by a \":\". Supported values of \"WHEN\" are the same as that of --use-postprocessor (default: after_move). The same syntax as the output template can be used to pass any field as arguments to the command; however, for security reasons the only allowed conversions are: \"i\"/\"d\" (signed integer decimal), \"f\" (floating-point decimal) and \"q\" (shell-quoted). If no fields are passed, %(filepath,_filename|)q is appended to the end of the command. This option can be used multiple times",
 		MetaArgs:       "[WHEN:]CMD",
 		Type:           "string",
 		LongFlags:      []string{"--exec"},
@@ -4091,7 +4091,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Output Template",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#output-template",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#output-template",
 			},
 		},
 		DefaultFlag: "--split-chapters",
@@ -4305,7 +4305,7 @@ var (
 		URLs: []*OptionURL{
 			{
 				Name: "Extractor Arguments",
-				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.03.17/README.md#extractor-arguments",
+				URL:  "https://github.com/yt-dlp/yt-dlp/blob/2026.06.09/README.md#extractor-arguments",
 			},
 		},
 		DefaultFlag: "--extractor-args",
