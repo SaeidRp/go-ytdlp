@@ -17,8 +17,8 @@ import (
 
 	"github.com/invopop/jsonschema"
 	"github.com/lmittmann/tint"
-	"github.com/lrstanley/go-ytdlp"
-	"github.com/lrstanley/go-ytdlp/optiondata"
+	"github.com/saeidrp/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp/optiondata"
 )
 
 type UIDMapper struct {
@@ -58,7 +58,7 @@ func main() {
 	ref := jsonschema.Reflector{
 		AllowAdditionalProperties: false,
 	}
-	if err := ref.AddGoComments("github.com/lrstanley/go-ytdlp", ".", jsonschema.WithFullComment()); err != nil {
+	if err := ref.AddGoComments("github.com/saeidrp/go-ytdlp", ".", jsonschema.WithFullComment()); err != nil {
 		slog.Error("failed to load go comments", "error", err)
 		os.Exit(1)
 	}

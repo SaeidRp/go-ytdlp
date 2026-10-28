@@ -13,7 +13,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/lrstanley/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp"
 )
 
 func main() {

@@ -1,15 +1,15 @@
-module github.com/lrstanley/go-ytdlp/_examples
+module github.com/saeidrp/go-ytdlp/_examples
 
 go 1.27
 
-replace github.com/lrstanley/go-ytdlp => ../
+replace github.com/saeidrp/go-ytdlp => ../
 
 require (
 	charm.land/bubbles/v2 v2.2.1
 	charm.land/bubbletea/v2 v2.1.0
 	charm.land/lipgloss/v2 v2.0.6
 	github.com/dustin/go-humanize v1.1.0
-	github.com/lrstanley/go-ytdlp v1.5.4
+	github.com/saeidrp/go-ytdlp v1.5.4
 	github.com/samber/slog-http v1.12.1
 )
 

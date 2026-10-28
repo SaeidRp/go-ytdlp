@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2020-12/schema",
-	"$id": "https://github.com/lrstanley/go-ytdlp/flag-config",
+	"$id": "https://github.com/saeidrp/go-ytdlp/flag-config",
 	"$ref": "#/$defs/FlagConfig",
 	"$defs": {
 		"ExtractedChapterData": {

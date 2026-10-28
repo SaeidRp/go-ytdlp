@@ -14,7 +14,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/lrstanley/go-ytdlp"
+	"github.com/saeidrp/go-ytdlp"
 	sloghttp "github.com/samber/slog-http"
 )
 

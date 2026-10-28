@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://github.com/lrstanley/go-ytdlp/_examples/http-server",
+  "$id": "https://github.com/saeidrp/go-ytdlp/_examples/http-server",
   "$ref": "#/$defs/Config",
   "$defs": {
     "Config": {

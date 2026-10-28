@@ -1,15 +1,15 @@
-module github.com/lrstanley/go-ytdlp/cmd
+module github.com/saeidrp/go-ytdlp/cmd
 
 go 1.27
 
-replace github.com/lrstanley/go-ytdlp => ../
+replace github.com/saeidrp/go-ytdlp => ../
 
 require (
 	github.com/go-task/slim-sprig/v3 v3.0.0
 	github.com/iancoleman/strcase v0.3.0
 	github.com/invopop/jsonschema v0.14.0
 	github.com/lmittmann/tint v1.2.1
-	github.com/lrstanley/go-ytdlp v1.5.4
+	github.com/saeidrp/go-ytdlp v1.5.4
 	github.com/mitchellh/go-wordwrap v1.0.1
 )
 
