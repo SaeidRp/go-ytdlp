@@ -143,6 +143,31 @@ to create a fancy, though relatively simple, UI for downloading videos.
 
 Source: [bubble-dl](./_examples/bubble-dl)
 
+### Overall progress (fork addition)
+
+`ProgressFunc` reports each file separately: a `bv+ba` download goes 0→100% for
+the video, 0→100% again for the audio, then post-processing with no bytes.
+`OverallProgressFunc` reports one progress per video across all requested
+formats and post-processing. Its phase only moves forward, and Percent and
+Downloaded never go backwards. The total is summed from the declared format
+sizes and refined while downloading (fragmented HLS/DASH formats are
+re-estimated once per completed fragment). It reads machine-readable JSON lines
+that yt-dlp prints through `--progress-template`/`--print`, not the
+human-readable progress bar. `SetProgressFn` (the fork's original callback) is
+deprecated in its favour.
+
+```go
+ytdlp.New().
+	Format("bv*+ba/b").
+	OverallProgressFunc(time.Second, func(p ytdlp.OverallProgress) {
+		// p.Phase: downloading (p.FormatIndex/p.FormatCount), post_processing, finished
+		fmt.Printf("%s %.1f%% %d/%d\n", p.Phase, p.Percent, p.Downloaded, p.Total)
+	}).
+	Run(ctx, url)
+```
+
+Source: [overall-progress](./_examples/overall-progress)
+
 ---
 
 ## :package: Install Function(s) & Binary Management
