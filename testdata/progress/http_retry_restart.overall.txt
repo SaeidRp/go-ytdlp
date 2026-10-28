@@ -1,0 +1,29 @@
+stdout	[generic] Extracting URL: http://SERVER/norangedrop/video.mp4
+stdout	[generic] video: Downloading webpage
+stdout	[info] video: Downloading 1 format(s): mp4
+stdout	go-ytdlp-progress:{"event":"before_dl","info":{"id": "video", "format_id": "mp4"},"formats":[]}
+stdout	[download] Destination: video.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1024, "total_bytes": 4612157},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 523264, "total_bytes": 4612157, "eta": 1, "speed": 2835932.663465564},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1047552, "total_bytes": 4612157, "eta": 1, "speed": 2761899.6858321745},"info":{"id": "video", "format_id": "mp4"}}
+stdout	[download] Got error: 1844862 bytes read, 2767295 more expected. Retrying (1/10)...
+stdout	[download] Unable to resume
+stdout	[download] Destination: video.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1024, "total_bytes": 4612157},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 3072, "total_bytes": 4612157, "eta": 1, "speed": 2528434.436420722},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 7168, "total_bytes": 4612157, "eta": 1, "speed": 4143435.9250275632},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 15360, "total_bytes": 4612157, "eta": 0, "speed": 7178218.322005571},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 130048, "total_bytes": 4612157, "eta": 1, "speed": 3045276.8112016167},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 523264, "total_bytes": 4612157, "eta": 1, "speed": 2763226.1458181986},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1047552, "total_bytes": 4612157, "eta": 1, "speed": 2745444.387740654},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2096128, "total_bytes": 4612157, "eta": 0, "speed": 2755774.8333902764},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4193280, "total_bytes": 4612157, "eta": 0, "speed": 2729378.473953269},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4612157, "total_bytes": 4612157, "eta": 0, "speed": 2722512.5686216475},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "finished", "downloaded_bytes": 4612157, "total_bytes": 4612157, "speed": 1939056.5801472114},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Metadata"},"info":{"id": "video"}}
+stdout	[Metadata] Adding metadata to "video.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Metadata"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "MoveFiles"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "MoveFiles"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"after_video","info":{"id": "video"}}
+exit	0

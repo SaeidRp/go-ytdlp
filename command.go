@@ -45,8 +45,10 @@ type Command struct {
 	cancelMaxWait        time.Duration
 	disableEnvVarInherit bool
 
-	progress *progressHandler
-	log      LogCallbackFunc
+	progress        *progressHandler
+	overallProgress OverallProgressCallbackFunc
+	legacyProgress  DownloadProgressFunc
+	log             LogCallbackFunc
 }
 
 // Clone returns a copy of the command, with all flags, env vars, executable,
@@ -62,6 +64,8 @@ func (c *Command) Clone() *Command {
 		cancelMaxWait:        c.cancelMaxWait,
 		disableEnvVarInherit: c.disableEnvVarInherit,
 		progress:             c.progress,
+		overallProgress:      c.overallProgress,
+		legacyProgress:       c.legacyProgress,
 		log:                  c.log,
 	}
 	maps.Copy(cc.env, c.env)
@@ -333,6 +337,8 @@ func (c *Command) runWithResult(ctx context.Context, cmd *exec.Cmd) (*Result, er
 
 	c.mu.RLock()
 	progress := c.progress
+	overallFn := c.overallProgress
+	legacyFn := c.legacyProgress
 	logFn := c.log
 	separateProcessGroup := c.separateProcessGroup
 	hasJSONFlag := c.hasJSONFlag()
@@ -344,6 +350,18 @@ func (c *Command) runWithResult(ctx context.Context, cmd *exec.Cmd) (*Result, er
 	}
 	stdout := &timestampWriter{pipe: PipeStdout, checkJSON: hasJSONFlag, progress: progress, log: sink}
 	stderr := &timestampWriter{pipe: PipeStderr, checkJSON: hasJSONFlag, log: sink}
+
+	var overall *overallTracker
+	if overallFn != nil {
+		// Post-processor lines go to stderr when the caller forces --quiet.
+		overall = newOverallTracker(overallFn)
+		stdout.lines, stderr.lines = overall, overall
+	}
+	var legacy *legacyProgress
+	if legacyFn != nil {
+		legacy = newLegacyProgress(legacyFn)
+		stdout.lines = legacy
+	}
 	cmd.Stdout = stdout
 	cmd.Stderr = stderr
 
@@ -371,6 +389,12 @@ func (c *Command) runWithResult(ctx context.Context, cmd *exec.Cmd) (*Result, er
 		Stdout:     stdout.String(),
 		Stderr:     stderr.String(),
 		OutputLogs: stdout.mergeResults(stderr),
+	}
+	if legacy != nil {
+		result.Downloads = legacy.list()
+	}
+	if overall != nil && err == nil {
+		overall.finish()
 	}
 
 	return wrapError(result, err)

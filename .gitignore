@@ -8,6 +8,7 @@ bin/*
 *.mp4
 *.mpg
 !testdata/*.mp4
+!testdata/progress/*.txt
 cmd/export-ytdlp/*.json
 _examples/bubble-dl/bubble-dl
 _examples/simple/simple

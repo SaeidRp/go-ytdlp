@@ -1,0 +1,14 @@
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|Status="starting"
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=1024|Speed=0|Percent="  0.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=261120|Speed=2766040.9002124|Percent="  5.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=523264|Speed=2711576.452764544|Percent=" 11.3%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=1047552|Speed=2721861.6404622593|Percent=" 22.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=2096128|Speed=2733543.6565257083|Percent=" 45.4%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4193280|Speed=2703930.4053568533|Percent=" 90.9%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4612157|Speed=2701817.8081597607|Percent="100.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4612157|Speed=2680858.5650768382|Percent="100.0%"|Status="finished"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=128355|TotalBytesEstimated=0|DownloadedBytes=1024|Speed=0|Percent="  0.8%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|TotalBytes=128355|TotalBytesEstimated=0|DownloadedBytes=128355|Speed=2735554.6461654156|Percent="100.0%"|Status="finished"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="vid1"|PlaylistID=""|Status="post_processing"
+stdout	dl:ID="vid1"|PlaylistID=""|Status="video_downloaded"
+exit	0

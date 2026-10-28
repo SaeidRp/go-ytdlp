@@ -136,10 +136,16 @@ func (s *logSink) log(r *ResultLog) {
 	s.mu.Unlock()
 }
 
+// lineConsumer takes over output lines; consume reports whether it did.
+type lineConsumer interface {
+	consume(line []byte) bool
+}
+
 type timestampWriter struct {
 	checkJSON bool
 	pipe      Pipe
 	progress  *progressHandler
+	lines     lineConsumer // OverallProgressFunc or the legacy SetProgressFn.
 	log       *logSink
 
 	buf            bytes.Buffer
@@ -186,6 +192,12 @@ func (w *timestampWriter) flush() {
 	}
 
 	line := bytes.TrimRightFunc(w.buf.Bytes(), unicode.IsSpace)
+
+	if w.lines != nil && w.lines.consume(line) {
+		w.lastWriteStart = time.Time{}
+		w.buf.Reset()
+		return
+	}
 
 	if w.progress != nil {
 		if v, ok := bytes.CutPrefix(line, progressPrefix); ok {

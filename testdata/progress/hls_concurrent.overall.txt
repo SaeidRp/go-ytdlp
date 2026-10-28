@@ -1,0 +1,30 @@
+stdout	[generic] Extracting URL: http://SERVER/plain/hls/index.m3u8
+stdout	[generic] index: Downloading webpage
+stdout	[generic] index: Downloading m3u8 information
+stdout	[generic] index: Checking m3u8 live status
+stdout	[info] index: Downloading 1 format(s): 0
+stdout	go-ytdlp-progress:{"event":"before_dl","info":{"id": "index", "format_id": "0"},"formats":[]}
+stdout	[hlsnative] Downloading m3u8 manifest
+stdout	[hlsnative] Total fragments: 11
+stdout	[download] Destination: index.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1024, "total_bytes_estimate": 9622404.0, "speed": 0, "fragment_index": 0, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1306624, "total_bytes_estimate": 21018624.0, "speed": 3550752.396167877, "fragment_index": 0, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2405076, "total_bytes_estimate": 32211740.0, "speed": 4849339.689369485, "fragment_index": 0, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2405076, "total_bytes_estimate": 35643960.0, "speed": 4849339.689369485, "fragment_index": 1, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4070232, "total_bytes_estimate": 10518666.4, "speed": 6578293.122111092, "fragment_index": 4, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4725592, "total_bytes_estimate": 11672100.0, "speed": 8245936.63604982, "fragment_index": 4, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 5830812, "total_bytes_estimate": 13978967.2, "speed": 8578203.150602844, "fragment_index": 4, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 7281332, "total_bytes_estimate": 9058353.333333332, "speed": 9195947.019334197, "fragment_index": 8, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 7805620, "total_bytes_estimate": 9134743.2, "speed": 9314949.939067736, "fragment_index": 9, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 8305336, "total_bytes_estimate": 9711460.0, "speed": 9272196.830811743, "fragment_index": 9, "fragment_count": 11},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "finished", "downloaded_bytes": 8601000, "total_bytes": 8601000, "speed": 9252971.758785464},"info":{"id": "index", "format_id": "0"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "FixupM3u8"},"info":{"id": "index"}}
+stdout	[FixupM3u8] Fixing MPEG-TS in MP4 container of "index.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "FixupM3u8"},"info":{"id": "index"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Metadata"},"info":{"id": "index"}}
+stdout	[Metadata] Adding metadata to "index.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Metadata"},"info":{"id": "index"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "MoveFiles"},"info":{"id": "index"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "MoveFiles"},"info":{"id": "index"}}
+stdout	go-ytdlp-progress:{"event":"after_video","info":{"id": "index"}}
+exit	0

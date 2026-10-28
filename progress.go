@@ -270,8 +270,11 @@ func (p *ProgressUpdate) PercentString() string {
 // ProgressFunc also sets [Command.ProgressTemplate] twice (download and
 // postprocess) so both kinds of events are emitted.
 //
-// See [Command.UnsetProgressFunc] to unset the callback.
+// See [Command.UnsetProgressFunc] to unset the callback. For one progress per
+// video across all formats, use [Command.OverallProgressFunc]; setting one
+// clears the other.
 func (c *Command) ProgressFunc(frequency time.Duration, fn ProgressCallbackFunc) *Command {
+	c.clearProgressHandlers()
 	if frequency < 100*time.Millisecond {
 		frequency = 100 * time.Millisecond
 	}

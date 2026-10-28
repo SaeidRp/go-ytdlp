@@ -1,0 +1,10 @@
+stdout	[info] vid1: Downloading 1 format(s): 137+140
+stdout	go-ytdlp-progress:{"event":"before_dl","info":{"id": "vid1", "format_id": "137+140", "filesize_approx": 4744512},"formats":[{"format_id": "137", "filesize": 4612157}, {"format_id": "140", "filesize_approx": 132355}]}
+stdout	[download] vid1.mp4 has already been downloaded
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Metadata"},"info":{"id": "vid1"}}
+stdout	[Metadata] Adding metadata to "vid1.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Metadata"},"info":{"id": "vid1"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "MoveFiles"},"info":{"id": "vid1"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "MoveFiles"},"info":{"id": "vid1"}}
+stdout	go-ytdlp-progress:{"event":"after_video","info":{"id": "vid1"}}
+exit	0

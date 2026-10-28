@@ -1,0 +1,19 @@
+stdout	[generic] Extracting URL: http://SERVER/plain/video.mp4
+stdout	[generic] video: Downloading webpage
+stdout	[info] video: Downloading 1 format(s): mp4
+stdout	go-ytdlp-progress:{"event":"before_dl","info":{"id": "video", "format_id": "mp4"},"formats":[]}
+stdout	[download] Resuming download at byte 2306078
+stdout	[download] Destination: video.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2307102, "total_bytes": 4612157},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2829342, "total_bytes": 4612157, "eta": 0, "speed": 2757168.6317926454},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 3353630, "total_bytes": 4612157, "eta": 0, "speed": 2762436.251832245},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4402206, "total_bytes": 4612157, "eta": 0, "speed": 2736101.7356881197},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4612157, "total_bytes": 4612157, "eta": 0, "speed": 2730561.321347812},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "finished", "downloaded_bytes": 4612157, "total_bytes": 4612157, "speed": 5421577.006356585},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Metadata"},"info":{"id": "video"}}
+stdout	[Metadata] Adding metadata to "video.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Metadata"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "MoveFiles"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "MoveFiles"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"after_video","info":{"id": "video"}}
+exit	0

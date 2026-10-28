@@ -1,0 +1,27 @@
+stdout	[generic] Extracting URL: http://SERVER/dropfirst/video.mp4
+stdout	[generic] video: Downloading webpage
+stdout	[info] video: Downloading 1 format(s): mp4
+stdout	go-ytdlp-progress:{"event":"before_dl","info":{"id": "video", "format_id": "mp4"},"formats":[]}
+stdout	[download] Destination: video.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1024, "total_bytes": 4612157},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 523264, "total_bytes": 4612157, "eta": 1, "speed": 2780731.249603744},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1047552, "total_bytes": 4612157, "eta": 1, "speed": 2748644.082266302},"info":{"id": "video", "format_id": "mp4"}}
+stdout	[download] Got error: 1844862 bytes read, 2767295 more expected. Retrying (1/10)...
+stdout	[download] Destination: video.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1048576, "total_bytes": 4612157},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1050624, "total_bytes": 4612157, "eta": 1, "speed": 3053294.286255924},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1054720, "total_bytes": 4612157, "eta": 0, "speed": 4859345.574915145},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1062912, "total_bytes": 4612157, "eta": 0, "speed": 8316059.047373177},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1112064, "total_bytes": 4612157, "eta": 0, "speed": 3579470.8458190574},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1570816, "total_bytes": 4612157, "eta": 1, "speed": 2843041.1848412817},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2095104, "total_bytes": 4612157, "eta": 0, "speed": 2783002.546780079},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 3143680, "total_bytes": 4612157, "eta": 0, "speed": 2739746.765457706},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4612157, "total_bytes": 4612157, "eta": 0, "speed": 2714977.1376501443},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "finished", "downloaded_bytes": 4612157, "total_bytes": 4612157, "speed": 2306392.485373771},"info":{"id": "video", "format_id": "mp4"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Metadata"},"info":{"id": "video"}}
+stdout	[Metadata] Adding metadata to "video.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Metadata"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "MoveFiles"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "MoveFiles"},"info":{"id": "video"}}
+stdout	go-ytdlp-progress:{"event":"after_video","info":{"id": "video"}}
+exit	0

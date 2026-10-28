@@ -1,0 +1,18 @@
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|Status="starting"
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=1024|Speed=0|Percent="  0.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=523264|Speed=2750679.0296558654|Percent=" 11.3%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=1047552|Speed=2708637.6420869897|Percent=" 22.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=1024|Speed=0|Percent="  0.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=3072|Speed=2256945.5049921176|Percent="  0.1%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=7168|Speed=3884839.2650213204|Percent="  0.2%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=15360|Speed=6378664.300990099|Percent="  0.3%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=130048|Speed=3078794.846624936|Percent="  2.8%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=523264|Speed=2806500.4913659054|Percent=" 11.3%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=1047552|Speed=2782290.57634666|Percent=" 22.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=2096128|Speed=2748522.5585706355|Percent=" 45.4%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4193280|Speed=2765437.334597505|Percent=" 90.9%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4612157|Speed=2757681.9357567844|Percent="100.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4612157|Speed=1958024.8878592628|Percent="100.0%"|Status="finished"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Status="post_processing"
+stdout	dl:ID="video"|PlaylistID=""|Status="video_downloaded"
+exit	0

@@ -1,0 +1,26 @@
+stdout	[info] vid1: Downloading 1 format(s): 137+140
+stdout	go-ytdlp-progress:{"event":"before_dl","info":{"id": "vid1", "format_id": "137+140", "filesize_approx": 4744512},"formats":[{"format_id": "137", "filesize": 4612157}, {"format_id": "140", "filesize_approx": 132355}]}
+stdout	[download] Destination: vid1.f137.mp4
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1024, "total_bytes": 4612157},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 261120, "total_bytes": 4612157, "eta": 1, "speed": 2905338.2934845756},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 523264, "total_bytes": 4612157, "eta": 1, "speed": 2762234.9917890425},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1047552, "total_bytes": 4612157, "eta": 1, "speed": 2704777.5473581376},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 2096128, "total_bytes": 4612157, "eta": 0, "speed": 2704321.55555952},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4193280, "total_bytes": 4612157, "eta": 0, "speed": 2736557.995709359},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 4612157, "total_bytes": 4612157, "eta": 0, "speed": 2732647.471164992},"info":{"id": "vid1", "format_id": "137"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "finished", "downloaded_bytes": 4612157, "total_bytes": 4612157, "speed": 2711864.3228343995},"info":{"id": "vid1", "format_id": "137"}}
+stdout	[download] Destination: vid1.f140.m4a
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "downloading", "downloaded_bytes": 1024, "total_bytes": 128355},"info":{"id": "vid1", "format_id": "140"}}
+stdout	go-ytdlp-progress:{"event":"download","progress":{"status": "finished", "downloaded_bytes": 128355, "total_bytes": 128355, "speed": 2862322.3006619345},"info":{"id": "vid1", "format_id": "140"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Merger"},"info":{"id": "vid1"}}
+stdout	[Merger] Merging formats into "vid1.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Merger"},"info":{"id": "vid1"}}
+stdout	Deleting original file vid1.f137.mp4 (pass -k to keep)
+stdout	Deleting original file vid1.f140.m4a (pass -k to keep)
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "Metadata"},"info":{"id": "vid1"}}
+stdout	[Metadata] Adding metadata to "vid1.mp4"
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "Metadata"},"info":{"id": "vid1"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "started", "postprocessor": "MoveFiles"},"info":{"id": "vid1"}}
+stdout	go-ytdlp-progress:{"event":"postprocess","progress":{"status": "finished", "postprocessor": "MoveFiles"},"info":{"id": "vid1"}}
+stdout	go-ytdlp-progress:{"event":"after_video","info":{"id": "vid1"}}
+exit	0

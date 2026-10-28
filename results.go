@@ -35,6 +35,11 @@ type Result struct {
 	// OutputLogs are the stdout/stderr logs, sorted by timestamp, and any JSON
 	// parsed (if configured with [Command.PrintJson]).
 	OutputLogs []*ResultLog `json:"output_logs"`
+
+	// Downloads are the downloads reported through [Command.SetProgressFn].
+	//
+	// Deprecated: only filled by the deprecated [Command.SetProgressFn].
+	Downloads []*DownloadProgress `json:"downloads,omitempty"`
 }
 
 func (r *Result) asString(stdout, stderr, timestamps, maskJSON, exitCode bool) string {

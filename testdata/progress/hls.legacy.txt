@@ -1,0 +1,38 @@
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|Status="starting"
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9529344.0|DownloadedBytes=1024|Speed=0|Percent="  0.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=12401664.0|DownloadedBytes=523264|Speed=1404772.3667728198|Percent="  4.2%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=15285248.0|DownloadedBytes=866304|Speed=1807577.76780958|Percent="  5.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=19058688.0|DownloadedBytes=866304|Speed=1807577.76780958|Percent="  4.5%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10291138.0|DownloadedBytes=1127424|Speed=2079573.7882876548|Percent=" 11.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=11012034.0|DownloadedBytes=1389568|Speed=2264087.170023098|Percent=" 12.6%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=12453826.0|DownloadedBytes=1741068|Speed=2390350.3039915003|Percent=" 14.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9923466.666666668|DownloadedBytes=2002188|Speed=2469105.9152195724|Percent=" 20.2%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10404064.0|DownloadedBytes=2264332|Speed=2529924.616050725|Percent=" 21.8%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=11365258.666666668|DownloadedBytes=2576352|Speed=2575150.3380760956|Percent=" 22.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9579570.0|DownloadedBytes=2706400|Speed=2575150.3380760956|Percent=" 28.3%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10120242.0|DownloadedBytes=3099616|Speed=2628925.41317209|Percent=" 30.6%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10841138.0|DownloadedBytes=3418968|Speed=2642363.035329625|Percent=" 31.5%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9444080.8|DownloadedBytes=3483480|Speed=2642363.035329625|Percent=" 36.9%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9948708.0|DownloadedBytes=3942232|Speed=2656367.5154161677|Percent=" 39.6%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10525424.8|DownloadedBytes=4261020|Speed=2657349.59404238|Percent=" 40.5%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=11226758.4|DownloadedBytes=4261020|Speed=2657349.59404238|Percent=" 38.0%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9679875.333333332|DownloadedBytes=4522140|Speed=2655477.17997426|Percent=" 46.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9920174.0|DownloadedBytes=4784284|Speed=2656368.790095667|Percent=" 48.2%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10400771.333333332|DownloadedBytes=5149884|Speed=2656007.067834065|Percent=" 49.5%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9606375.42857143|DownloadedBytes=5411004|Speed=2655345.111372941|Percent=" 56.3%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9812345.714285715|DownloadedBytes=5673148|Speed=2655964.945064752|Percent=" 57.8%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10224286.285714285|DownloadedBytes=5983100|Speed=2657564.343352587|Percent=" 58.5%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9641984.0|DownloadedBytes=6244220|Speed=2659296.4656991693|Percent=" 64.8%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9822208.0|DownloadedBytes=6506364|Speed=2659806.3721269337|Percent=" 66.2%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=10182656.0|DownloadedBytes=6882304|Speed=2660075.761501923|Percent=" 67.6%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9360388.88888889|DownloadedBytes=6914048|Speed=2660075.761501923|Percent=" 73.9%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9660762.222222222|DownloadedBytes=7405568|Speed=2656509.5388540244|Percent=" 76.7%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9981160.444444444|DownloadedBytes=7643140|Speed=2655120.83510325|Percent=" 76.6%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9343193.2|DownloadedBytes=7707652|Speed=2655120.83510325|Percent=" 82.5%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9595506.8|DownloadedBytes=8166404|Speed=2652701.672263835|Percent=" 85.1%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=9883865.2|DownloadedBytes=8462068|Speed=2652502.92120575|Percent=" 85.6%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=0|TotalBytesEstimated=8632744.0|DownloadedBytes=8526580|Speed=2652502.92120575|Percent=" 98.8%"|Status="downloading"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Title="index"|TotalBytes=8601000|TotalBytesEstimated=0|DownloadedBytes=8601000|Speed=2650075.3956963904|Percent="100.0%"|Status="finished"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="index"|PlaylistID=""|Status="post_processing"
+stdout	dl:ID="index"|PlaylistID=""|Status="video_downloaded"
+exit	0

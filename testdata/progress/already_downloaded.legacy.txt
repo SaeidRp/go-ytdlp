@@ -1,0 +1,4 @@
+stdout	dl:ID="vid1"|PlaylistID=""|Title="Two \"formats\" \\ \u062a\u0633\u062a"|Status="starting"
+stdout	dl:ID="vid1"|PlaylistID=""|Status="post_processing"
+stdout	dl:ID="vid1"|PlaylistID=""|Status="video_downloaded"
+exit	0

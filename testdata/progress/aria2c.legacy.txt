@@ -1,0 +1,5 @@
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|Status="starting"
+stdout	dl:ID="video"|PlaylistID=""|Title="video"|TotalBytes=4612157|TotalBytesEstimated=0|DownloadedBytes=4612157|Speed=11076260.445109645|Percent="100.0%"|Status="finished"|PlaylistCount=0|PlaylistIndex=0
+stdout	dl:ID="video"|PlaylistID=""|Status="post_processing"
+stdout	dl:ID="video"|PlaylistID=""|Status="video_downloaded"
+exit	0
