@@ -38,6 +38,8 @@ var (
 		"linux_armv7l":     {"yt-dlp_linux_armv7l", []string{"yt-dlp-" + Version, "yt-dlp"}},
 		"linux_unknown":    {"yt-dlp", []string{"yt-dlp-" + Version, "yt-dlp"}},
 		"windows_amd64":    {"yt-dlp.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
+		"windows_arm64":    {"yt-dlp_arm64.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
+		"windows_386":      {"yt-dlp_x86.exe", []string{"yt-dlp-" + Version + ".exe", "yt-dlp.exe"}},
 	}
 )
 
