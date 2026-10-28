@@ -41,7 +41,11 @@ test: fetch
 test-e2e:
 	go test -tags=e2e -run '^TestExtractedInfoE2E' -v -timeout 15m ./...
 
-generate: license fetch patch
+generate: license codegen
+
+# codegen regenerates the bindings for YTDLP_VERSION without the remote license
+# header script, so CI never pipes a downloaded script into a shell.
+codegen: fetch patch
 	rm -rf \
 		*.gen.go *.gen_test.go \
 		optiondata/*.gen.go

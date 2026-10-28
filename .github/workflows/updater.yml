@@ -1,45 +1,68 @@
 name: updater
 
+# Regenerates the CLI bindings whenever yt-dlp publishes a release and commits
+# the result to master (same idea as upstream's updater, without its
+# maintainer-specific actions and tokens). The job runs go vet and the tests
+# itself, because pushes made with GITHUB_TOKEN don't trigger other workflows.
+
 on:
   schedule:
     - cron: "0 */6 * * *" # every 6 hours
   workflow_dispatch: {}
 
+permissions:
+  contents: write
+
+concurrency:
+  group: updater
+  cancel-in-progress: false
+
 jobs:
   yt-dlp:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v7
-      - uses: lrstanley/.github/composite/go-versions@master
-        id: goversion
-      - name: install-go
-        uses: lrstanley/.github/composite/install-go@master
-        with:
-          version: "${{ steps.goversion.outputs.version }}"
-      - name: install-uv
-        uses: astral-sh/setup-uv@v10.1.0
-      - id: release
-        uses: lrstanley/.github/composite/get-release-version@master
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repo: yt-dlp/yt-dlp
-      - id: version
-        run: |
-          echo "previous_version=$(sed -rn 's/export YTDLP_VERSION := (.+)/\1/p' Makefile)" >> "$GITHUB_OUTPUT"
-          sed -ri 's/YTDLP_VERSION := .+/YTDLP_VERSION := '${{ steps.release.outputs.version }}'/g' Makefile
 
-          make generate
-      - uses: lrstanley/.github/composite/pr-version-updater@master
+      - uses: actions/setup-go@v6
         with:
-          token: ${{ secrets.USER_PAT }}
-          tool: yt-dlp
-          chore: deps
-          version: ${{ steps.release.outputs.version }}
-          previous_version: ${{ steps.version.outputs.previous_version }}
-          paths: |
-            Makefile
-            *.gen.go
-            *.gen_test.go
-            optiondata/*.gen.go
-            optiondata/json-schema.json
-          repo: ${{ steps.release.outputs.repo }}
+          go-version-file: go.mod
+
+      - uses: astral-sh/setup-uv@v10.1.0
+
+      - id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          latest="$(gh api repos/yt-dlp/yt-dlp/releases/latest --jq .tag_name)"
+          current="$(sed -rn 's/^export YTDLP_VERSION := (.+)/\1/p' Makefile)"
+          if ! [[ "$latest" =~ ^[0-9]{4}\.[0-9]{2}\.[0-9]{2}(\.[0-9]+)?$ ]]; then
+            echo "::error::unexpected yt-dlp release tag: $latest"
+            exit 1
+          fi
+          echo "latest=$latest" >> "$GITHUB_OUTPUT"
+          echo "current=$current" >> "$GITHUB_OUTPUT"
+
+      - name: regenerate
+        if: steps.version.outputs.latest != steps.version.outputs.current
+        env:
+          LATEST: ${{ steps.version.outputs.latest }}
+        run: |
+          sed -ri "s/^export YTDLP_VERSION := .+/export YTDLP_VERSION := ${LATEST}/" Makefile
+          make codegen
+
+      - name: commit
+        if: steps.version.outputs.latest != steps.version.outputs.current
+        env:
+          LATEST: ${{ steps.version.outputs.latest }}
+          CURRENT: ${{ steps.version.outputs.current }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Makefile ./*.gen.go ./*.gen_test.go optiondata/*.gen.go optiondata/json-schema.json go.mod go.sum cmd/*/go.mod cmd/*/go.sum
+          if git diff --cached --quiet; then
+            echo "nothing to commit"
+            exit 0
+          fi
+          git commit -m "chore(deps): update yt-dlp from ${CURRENT} to ${LATEST}"
+          git push origin HEAD:master
